@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Reservation</title>
+</head>
+<body>
+    <h2>Hotel Reservation Form</h2>
+    <form action="http://programacion-cum.unex.es:8080/request.jsp" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="phone">Phone:</label><br>
+        <input type="tel" id="phone" name="phone" required><br>
+
+        <label for="checkin">Check-in Date:</label><br>
+        <input type="date" id="checkin" name="checkin" required><br>
+
+        <label for="checkout">Check-out Date:</label><br>
+        <input type="date" id="checkout" name="checkout" required><br>
+
+        <label for="hotel">Hotel:</label><br>
+        <select id="hotel" name="hotel" required>
+            <option value="Gran Hotel Aqualange">Gran Hotel Aqualange</option>
+            <option value="Hotel NH Palacio de Oquendo">Hotel NH Palacio de Oquendo</option>
+            <option value="Hotel Ilunion Mérida Palace">Hotel Ilunion Mérida Palace</option>
+            <option value="Hotel Trujillo">Hotel Trujillo</option>
+        </select><br>
+
+        <label for="guests">Number of Guests:</label><br>
+        <input type="number" id="guests" name="guests" min="1" required><br>
+
+        <label for="room-type">Room Type:</label><br>
+        <select id="room-type" name="room-type" required>
+            <option value="Single">Single</option>
+            <option value="Double">Double</option>
+            <option value="Suite">Suite</option>
+        </select><br>
+
+        <label for="special-requests">Special Requests:</label><br>
+        <textarea id="special-requests" name="special-requests" rows="4" cols="50"></textarea><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
