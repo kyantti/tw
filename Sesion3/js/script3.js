@@ -1,87 +1,87 @@
-// Declaracion de variables
-var num1 = "";
-var num2 = "";
-var opera;
+let operandA = "";
+let operandB = "";
+let currentOperation;
 
-// Función que concatena el número presionado. Luego refresca el texto
-function darNumero(numero) {
-    if (opera === undefined) {
-        num1 = parseFloat(num1.toString() + numero);
-        refrescar();
+function setOperand(number) {
+    let operand;
+
+    if (currentOperation === undefined) {
+        operand = operandA;
     } else {
-        num2 = parseFloat(num2.toString() + numero);
-        refrescar();
+        operand = operandB;
     }
+
+    if (number === null && operand.toString().indexOf('.') === -1) {
+        operand += '.';
+    } else {
+        operand = parseFloat(operand.toString() + number);
+    }
+
+    if (currentOperation === undefined) {
+        operandA = operand;
+    } else {
+        operandB = operand;
+    }
+
+    refreshScreen(operand);
 }
 
-// Esta función realiza las distintas operaciones aritméticas en función del botón pulsado
-function operar(valor) {
-    // Si hay una operación pendiente, resuélvela antes de comenzar una nueva
-    if (opera !== undefined && num2 !== 0) {
-        esIgual();
+function setOperation(op) {
+
+    // If there is no operandA yet and the operator is "-" then it is a negative number
+    if (operandA === "" && op === "-") {
+        operandA = "-";
+        refreshScreen(operandA);
+        return;
     }
-    opera = valor;
+    
+    if (currentOperation == undefined && operandA !== "" && operandB === "") {
+        currentOperation = op;
+    }
+    else if (operandA !== "" && operandB !== "") {
+        calculate();
+        currentOperation = op;
+    }
+    refreshScreen(op);
 }
 
-// Función para pulsar igual. Al final llama a refrescar()
-function esIgual() {
-    switch (opera) {
-        case 1:
-            num1 += num2;
-            break;
-        case 2:
-            num1 -= num2;
-            break;
-        case 3:
-            num1 *= num2;
-            break;
-        case 4:
-            num1 /= num2;
-            break;
-        case 5:
-            num1 = Math.pow(num1, num2);
-            break;
-    }
-    num2 = 0;
-    opera = undefined;
-    refrescar();
-}
-
-
-// Función que coloca la coma al presionar dicho botón. Luego refresca el texto
-function darComa() {
-    if (opera === undefined) {
-        if (num1.toString().indexOf('.') === -1) {
-            num1 = num1.toString() + ".";
-            refrescar();
+function calculate() {
+    let result;
+    if (typeof operandA === 'number' && typeof operandB === 'number') {
+        switch (currentOperation) {
+            case '+':
+                result = operandA + operandB;
+                break;
+            case '-':
+                result = operandA - operandB;
+                break;
+            case '*':
+                result = operandA * operandB;
+                break;
+            case '/':
+                result = operandA / operandB;
+                break;
+            case '^':
+                result = Math.pow(operandA, operandB);
+                break;
         }
     } else {
-        if (num2.toString().indexOf('.') === -1) {
-            num2 = num2.toString() + ".";
-            refrescar();
-        }
-    }
-}
-
-// Función que coloca la C al presionar dicho botón. Luego refresca el texto
-function darC() {
-    num1 = 0;
-    num2 = 0;
-    opera = undefined;
-    refrescar();
-}
-
-// Muestra en el cuadro de texto el valor
-function refrescar() {
-    var elemento = document.getElementById('valor_numero');
-    if (typeof opera === 'undefined') {
-        elemento.value = num1;
-
-    } else {
-        elemento.value = num2;
+        result = "Error: Operands must be numbers";
     }
 
+    operandA = result;
+    operandB = "";
+    refreshScreen(result);
 }
 
+function clearScreen() {
+    operandA = "";
+    operandB = "";
+    currentOperation = undefined;
+    refreshScreen("");
+}
 
-
+function refreshScreen(value) {
+    let screen = document.getElementById('valor_numero');
+    screen.value = value;
+}

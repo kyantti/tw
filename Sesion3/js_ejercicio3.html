@@ -15,66 +15,66 @@
         </tr>
         <tr>
             <td colspan="2">
-                <input type="Button" id="potencia" value="exp" class="boton_largo funcion" onclick="operar(5)">
+                <input type="Button" id="potencia" value="exp" class="boton_largo funcion" onclick="setOperation('^')">
             </td>
             <td>
-                <input type="Button" id="Dividir" value="/" class="boton funcion" onclick="operar(4)">
+                <input type="Button" id="Dividir" value="/" class="boton funcion" onclick="setOperation('/')">
             </td>
             <td>
-                <input type="Button" id="Multiplicar" value="x" class="boton funcion" onclick="operar(3)">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <input type="Button" id="7" value="7" class="boton" onclick="darNumero('7')">
-            </td>
-            <td>
-                <input type="Button" id="8" value="8" class="boton" onclick="darNumero('8')">
-            </td>
-            <td>
-                <input type="Button" id="9" value="9" class="boton" onclick="darNumero('9')">
-            </td>
-            <td>
-                <input type="Button" id="Restar" value="-" class="boton funcion" onclick="operar(2)">
+                <input type="Button" id="Multiplicar" value="x" class="boton funcion" onclick="setOperation('*')">
             </td>
         </tr>
         <tr>
             <td>
-                <input type="Button" id="4" value="4" class="boton" onclick="darNumero('4')">
+                <input type="Button" id="7" value="7" class="boton" onclick="setOperand('7')">
             </td>
             <td>
-                <input type="Button" id="5" value="5" class="boton" onclick="darNumero('5')">
+                <input type="Button" id="8" value="8" class="boton" onclick="setOperand('8')">
             </td>
             <td>
-                <input type="Button" id="6" value="6" class="boton" onclick="darNumero('6')">
+                <input type="Button" id="9" value="9" class="boton" onclick="setOperand('9')">
+            </td>
+            <td>
+                <input type="Button" id="Restar" value="-" class="boton funcion" onclick="setOperation('-')">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="Button" id="4" value="4" class="boton" onclick="setOperand('4')">
+            </td>
+            <td>
+                <input type="Button" id="5" value="5" class="boton" onclick="setOperand('5')">
+            </td>
+            <td>
+                <input type="Button" id="6" value="6" class="boton" onclick="setOperand('6')">
             </td>
     		<td>
-    			<input type="Button" id="Sumar" value="+" class="boton funcion" onclick="operar(1)">
+    			<input type="Button" id="Sumar" value="+" class="boton funcion" onclick="setOperation('+')">
     		</td>
         </tr>
         <tr>
             <td>
-                <input type="Button" id="1" value="1" class="boton" onclick="darNumero('1')">
+                <input type="Button" id="1" value="1" class="boton" onclick="setOperand('1')">
             </td>
             <td>
-                <input type="Button" id="2" value="2" class="boton" onclick="darNumero('2')">
+                <input type="Button" id="2" value="2" class="boton" onclick="setOperand('2')">
             </td>
             <td>
-                <input type="Button" id="3" value="3" class="boton" onclick="darNumero('3')">
+                <input type="Button" id="3" value="3" class="boton" onclick="setOperand('3')">
             </td>
             <td>
-                <input type="Button" id="igual" value="=" class="boton funcion" onclick="esIgual()">
+                <input type="Button" id="igual" value="=" class="boton funcion" onclick="calculate()">
             </td>
         </tr>
         <tr>
             <td colspan="2">
-                <input type="Button" id="0" value="0" class="boton_largo" onclick="darNumero('0')">
+                <input type="Button" id="0" value="0" class="boton_largo" onclick="setOperand('0')">
             </td>
 	    <td>
-                <input type="Button" id="," value="," class="boton" onclick="darComa()">
+                <input type="Button" id="," value="," class="boton" onclick="setOperand(null)">
             </td>
     	    <td>
-    		<input type="Button" id="C" value="C" class="boton funcion" onclick="darC()">
+    		<input type="Button" id="C" value="C" class="boton funcion" onclick="clearScreen()">
     	    </td>
         </tr>
     </table>
