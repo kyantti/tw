@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca del Centro Universitario de Mérida</title>
+    <link rel="stylesheet" href="/Entrega1/css/books.css">
+</head>
+
+<body>
+    <header>
+        <img src="https://www.unex.es/conoce-la-uex/centros/cum/archivos/imagenes/portada-1/logo-CUMe.jpg"
+            alt="Library Logo">
+        <h1>Biblioteca del Centro Universitario de Mérida</h1>
+        <nav>
+            <ul>
+                <li><a href="main.html">Página Principal</a></li>
+                <li><a href="books.html">Libros</a></li>
+                <li><a href="news.html">Noticias</a></li>
+                <li><a href="reservations.html">Reservas</a></li>
+                <li><a href="games.html">Juegos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="search-books">
+            <h2>Buscar Libros</h2>
+            <form role="search">
+                <div>
+                    <input type="search" id="mySearch" name="q" placeholder="Buscar en el sitio…"
+                        aria-label="Buscar contenido del sitio" />
+                    <button>Buscar</button>
+                </div>
+            </form>
+        </section>
+        <section id="recommended-books">
+            <h2>Libros Recomendados del Mes</h2>
+            <div class="category-grid">
+                <div class="category">
+                    <h3>Filosofía</h3>
+                    <div class="books">
+                        <div class="book">
+                            <h4>El banquete</h4>
+                            <img src="https://m.media-amazon.com/images/I/61xVYnNqQqL._AC_UF894,1000_QL80_.jpg"
+                                alt="El Sueño de los Dioses">
+                            <h5>Autor: Platon</h5>
+                            <p>El banquete o El simposio es un diálogo platónico escrito por Platón sobre los años
+                                385–370 a. C., ​​ y es uno de los diálogos más trabajados, apreciado tanto por su
+                                contenido filosófico como por su contenido literario.​ Versa sobre el amor.​ Esta obra,
+                                junto al Fedro, conformó la idea de amor platónico.</p>
+                        </div>
+                        <!-- Agrega más libros de ficción aquí -->
+                    </div>
+                </div>
+                <div class="category">
+                    <h3>Novela</h3>
+                    <div class="books">
+                        <div class="book">
+                            <h4>La Familia de Pascual Duarte</h4>
+                            <img src="data:image/jpeg;base64,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"
+                                alt="Descubriendo el Universo">
+                            <h5>Autor: Camilo José Cela</h5>
+                            <p>La familia de Pascual Duarte es una novela de Camilo José Cela, publicada en la lista de
+                                las 100 mejores novelas en español del siglo XX del periódico español El Mundo.​</p>
+                        </div>
+                        <!-- Agrega más libros de no ficción aquí -->
+                    </div>
+                </div>
+                <div class="category">
+                    <h3>Biografías</h3>
+                    <div class="books">
+                        <div class="book">
+                            <h4>El Camino del Éxito</h4>
+                            <img src="data:image/jpeg;base64,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"
+                                alt="El Camino del Éxito">
+                            <h5>Autor: Walter Isaacson</h5>
+                            <p>Steve Jobs es la biografía autorizada del empresario informático Steve Jobs. Fue escrita
+                                a pedido del propio Jobs por el biógrafo estadounidense Walter Isaacson, antiguo
+                                ejecutivo de la CNN y Time Magazine que ya había escrito las populares biografías de
+                                Benjamin Franklin y Albert Einstein.​​</p>
+                        </div>
+                        <!-- Agrega más biografías aquí -->
+                    </div>
+                </div>
+                <div class="category">
+                    <h3>Ficción</h3>
+                    <div class="books">
+                        <div class="book">
+                            <h4>Niebla</h4>
+                            <img src="data:image/jpeg;base64,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"
+                                alt="Exploradores del Espacio">
+                            <h5>Autor: Camilo José Cela</h5>
+                            <p>Niebla es una novela escrita por Miguel de Unamuno en 1907 y publicada en 1914 por la
+                                Editorial Renacimiento que narra la historia de Augusto Pérez, un joven rico licenciado
+                                en Derecho, hijo único de ... </p>
+                        </div>
+                        <!-- Agrega más libros de ciencia ficción aquí -->
+                    </div>
+                </div>
+                <div class="category">
+                    <h3>Historia</h3>
+                    <div class="books">
+                        <div class="book">
+                            <h4>El grito armenio</h4>
+                            <img src="data:image/jpeg;base64,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"
+                                alt="El Renacimiento: Un Viaje en el Tiempo">
+                            <h5>Autor: Mariano Saravia</h5>
+                            <p>Este libro recopila los resultados de una sólida investigación sobre el genocidio de más
+                                de un millón y medio de armenias y armenios a manos del ejército turco entre 1915 y
+                                1923. Mariano Saravia explica con claridad los antecedentes y desencadenantes de ese
+                                primer genocidio del siglo XX. ... </p>
+                        </div>
+                        <!-- Agrega más libros de historia aquí -->
+                    </div>
+                </div>
+                <div class="category">
+                    <h3>Ciencias informáticas</h3>
+                    <div class="books">
+                        <div class="book">
+                            <h4>Head First Servlets and JSP</h4>
+                            <img src="https://m.media-amazon.com/images/I/91yISYgXhcL._SL1500_.jpg"
+                                alt="Alas de Versos">
+                            <h5>Autor: Bryan Basham</h5>
+                            <p>¿Quiere estudiar para el nuevo examen J2EE 1.5 Sun Certified Web Component Developer
+                                (SCWCD)? Este libro lo pondrá al día con la tecnología; de hecho, la conocerá tan bien
+                                que podrá aprobar el nuevo examen J2EE 1.5. Si eso es lo que quieres hacer, eso es.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="category">
+                    <h3>Poesía</h3>
+                    <div class="books">
+                        <div class="book">
+                            <h4>Libro de poemas</h4>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXWVcjiLYM4tePtihIiY7gHg1vFKebwKI-BExQjThldlzciqHuzBavp9rM&s=5"
+                                alt="Alas de Versos">
+                            <h5>Autor: Federico Garcia Lorca</h5>
+                            <p>Para su primer libro poético, Federico García Lorca (1898-1936) poda ramas y follaje de
+                                su frondoso árbol lírico, como él gustaba decir, y entrega a la imprenta la colección
+                                más amplia de las que publicó.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="category">
+                    <h3>Finanzas</h3>
+                    <div class="books">
+                        <div class="book">
+                            <h4>Padre Rico, Padre Pobre</h4>
+                            <img src="https://m.media-amazon.com/images/I/81iEKRLmvlS._AC_UF1000,1000_QL80_.jpg"
+                                alt="El Camino del Éxito">
+                            <h5>Autor: Robert Kiyosaki, Sharon Lechter</h5>
+                            <p>Padre rico y padre pobre es un libro escrito por Robert Kiyosaki y Sharon Lechter. Evoca
+                                el concepto de libertad financiera a través de la inversión, los inmuebles, ser dueño de
+                                negocios y el uso.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="category">
+                    <h3>Autoayuda</h3>
+                    <div class="books">
+                        <div class="book">
+                            <h4>Habitos atómicos</h4>
+                            <img src="https://www.euskadi.eus/contenidos/noticia/mugiment_albistea_221003/es_def/images/Habitos-atomicos.jpg"
+                                alt="Steve Jobs">
+                            <h5>Autor: James Clear</h5>
+                            <p>Especialista en formación de hábitos de larga duración. Su web, James Clear, recibe dos
+                                millones de visitas mensuales, y su curso Habits Academy es seguido por miles de
+                                estudiantes.​​</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="category">
+                    <h3>Fantasia</h3>
+                    <div class="books">
+                        <div class="book">
+                            <h4>Coraline</h4>
+                            <img src="https://m.media-amazon.com/images/I/81OnC1zrN8S._SL1500_.jpg"
+                                alt="Exploradores del Espacio">
+                            <h5>Autor: Neil Gaiman</h5>
+                            <p>Coraline es una novela de fantasía oscura escrita por el escritor británico Neil Gaiman,
+                                publicada en 2002 por Bloomsbury y Harper Collins.​ La novela fue galardonada en 2003
+                                con el Premio Hugo a Mejor Novela Corta, y el 2003 Premio de Nebulosa para Mejor Novela.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Biblio CUMe. Todos los derechos reservados.</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/Entrega1/js/books.js"></script> <!-- Agrega el script para la funcionalidad de búsqueda -->
+</body>
+
+</html>
