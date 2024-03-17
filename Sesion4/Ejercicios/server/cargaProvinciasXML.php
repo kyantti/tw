@@ -62,4 +62,3 @@ foreach($provincias as $codigo => $nombre) {
 
 echo "<provincias>\n".implode("\n", $elementos_xml)."\n</provincias>"
 
-?>

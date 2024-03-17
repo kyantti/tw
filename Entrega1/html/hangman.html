@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juegos - Biblio CUMe</title>
-    <link rel="stylesheet" href="/Entrega1/css/games.css">
+    <link rel="stylesheet" href="/Entrega1/css/hangman.css">
 </head>
 
 <body>
@@ -19,7 +19,7 @@
                 <li><a href="books.html">Libros</a></li>
                 <li><a href="news.html">Noticias</a></li>
                 <li><a href="reservations.html">Reservas</a></li>
-                <li><a href="games.html">Juegos</a></li>
+                <li><a href="hangman.html">Juegos</a></li>
             </ul>
         </nav>
     </header>
@@ -27,10 +27,9 @@
         <section id="hangman-game">
             <div class="hangman-container">
                 <h1 class="title">Ahorcado</h1>
-                <h2 id="final-message"></h2>
-                <h3 id="correct"></h3>
+                <h3 id="correct">¡Bien!</h3>
                 <div class="flex-row no-wrap">
-                    <h2 class="word" id="word"></h2>
+                    <h2 class="word" id="word">Palabra</h2>
                     <picture>
                         <img src="/Entrega1/img/ahorcado_0.png" alt="" id="image0">
                         <img src="/Entrega1/img/ahorcado_1.png" alt="" id="image1">
@@ -43,11 +42,11 @@
                 </div>
                 <div class="flex-row" id="turns">
                     <div class="col">
-                        <h3>Remaining Attempts: <span id="attempts">6</span></h3>
+                        <h3>Intentos: <span id="attempts">6</span></h3>
                     </div>
                     <div class="col">
-                        <button onclick="start()" id="reset">Choose another word</button>
-                        <button onclick="hint()" id="hint">Give me a hint!</button>
+                        <button onclick="start()" id="reset">Elegir otra palabra</button>
+                        <br>
                         <span id="hint-space"></span>
                     </div>
                 </div>

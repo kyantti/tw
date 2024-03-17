@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteca del Centro Universitario de Mérida</title>
     <link rel="stylesheet" href="/Entrega1/css/books.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/Entrega1/js/books.js"></script>
 </head>
 
 <body>
@@ -19,16 +21,16 @@
                 <li><a href="books.html">Libros</a></li>
                 <li><a href="news.html">Noticias</a></li>
                 <li><a href="reservations.html">Reservas</a></li>
-                <li><a href="games.html">Juegos</a></li>
+                <li><a href="hangman.html">Juegos</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section id="search-books">
             <h2>Buscar Libros</h2>
-            <form role="search">
+            <form role="search" action="http://programacion-cum.unex.es:8080/request.jsp" method="get">
                 <div>
-                    <input type="search" id="mySearch" name="q" placeholder="Buscar en el sitio…"
+                    <input type="search" id="mySearch" name="book" placeholder="Buscar en el sitio…"
                         aria-label="Buscar contenido del sitio" />
                     <button>Buscar</button>
                 </div>
@@ -50,7 +52,7 @@
                                 contenido filosófico como por su contenido literario.​ Versa sobre el amor.​ Esta obra,
                                 junto al Fedro, conformó la idea de amor platónico.</p>
                         </div>
-                        <!-- Agrega más libros de ficción aquí -->
+    
                     </div>
                 </div>
                 <div class="category">
@@ -64,7 +66,7 @@
                             <p>La familia de Pascual Duarte es una novela de Camilo José Cela, publicada en la lista de
                                 las 100 mejores novelas en español del siglo XX del periódico español El Mundo.​</p>
                         </div>
-                        <!-- Agrega más libros de no ficción aquí -->
+                        
                     </div>
                 </div>
                 <div class="category">
@@ -80,7 +82,7 @@
                                 ejecutivo de la CNN y Time Magazine que ya había escrito las populares biografías de
                                 Benjamin Franklin y Albert Einstein.​​</p>
                         </div>
-                        <!-- Agrega más biografías aquí -->
+                       
                     </div>
                 </div>
                 <div class="category">
@@ -95,7 +97,7 @@
                                 Editorial Renacimiento que narra la historia de Augusto Pérez, un joven rico licenciado
                                 en Derecho, hijo único de ... </p>
                         </div>
-                        <!-- Agrega más libros de ciencia ficción aquí -->
+                        
                     </div>
                 </div>
                 <div class="category">
@@ -111,7 +113,7 @@
                                 1923. Mariano Saravia explica con claridad los antecedentes y desencadenantes de ese
                                 primer genocidio del siglo XX. ... </p>
                         </div>
-                        <!-- Agrega más libros de historia aquí -->
+                        
                     </div>
                 </div>
                 <div class="category">
@@ -183,7 +185,8 @@
                                 con el Premio Hugo a Mejor Novela Corta, y el 2003 Premio de Nebulosa para Mejor Novela.
                             </p>
                         </div>
-                    </div>
+                    </di<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                    <script src="/Entrega1/js/books.js"></script>
                 </div>
             </div>
         </section>
@@ -193,8 +196,7 @@
     <footer>
         <p>&copy; 2024 Biblio CUMe. Todos los derechos reservados.</p>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="/Entrega1/js/books.js"></script> <!-- Agrega el script para la funcionalidad de búsqueda -->
+    
 </body>
 
 </html>

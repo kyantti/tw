@@ -8123,4 +8123,3 @@ foreach($losMunicipios as $codigo => $nombre) {
 
 echo "<municipios>\n".implode("\n", $elementos_xml)."</municipios>";
 
-?>

@@ -7,6 +7,8 @@
     <title>Principal - Biblio CUMe</title>
     <link rel="stylesheet" href="/Entrega1/css/main.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.0/main.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/Entrega1/js/carousel.js"></script>
 </head>
 
 <body>
@@ -20,21 +22,21 @@
                 <li><a href="books.html">Libros</a></li>
                 <li><a href="news.html">Noticias</a></li>
                 <li><a href="reservations.html">Reservas</a></li>
-                <li><a href="games.html">Juegos</a></li>
+                <li><a href="hangman.html">Juegos</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <!-- Main content goes here -->
+
         <section id="latest-news">
             <h2>Ultimas Noticias</h2>
             <div class="carousel">
                 <div class="carousel-inner">
                     <img src="https://www.rebiun.org/sites/default/files/2024-03/IV%20JP%20REBIUN%20patrocinadores.png"
-                        alt="Image 1">
+                        alt="news1">
                     <img src="https://www.unex.es/organizacion/gobierno/vicerrectorados/vicealumn/funciones/practicas-y-empleo/cabecera_practicas.png"
-                        alt="Image 2">
-                    <img src="https://www.unex.es/header-images/-35/leadImage_cabecera" alt="Image 3">
+                        alt="" news2">
+                    <img src="https://www.unex.es/header-images/-35/leadImage_cabecera" alt="news3">
                 </div>
                 <button class="prev">Prev</button>
                 <button class="next">Next</button>
@@ -44,16 +46,16 @@
         <section id="calendar">
             <h2>Calendario</h2>
             <div id="calendar-container">
-                <iframe src="https://unex.libcal.com/widget/events/minicalendar?iid=604&cal_id=6634&audience=&c=&z=&l=4&tar=0&sp=0&date=2024-03-01"></iframe>
+                <iframe
+                    src="https://unex.libcal.com/widget/events/minicalendar?iid=604&cal_id=6634&audience=&c=&z=&l=4&tar=0&sp=0&date=2024-03-01"></iframe>
             </div>
         </section>
     </main>
+
     <footer>
         <p>&copy; 2024 Biblio CUMe. Todos los derechos reservados.</p>
     </footer>
-    
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="/Entrega1/js/carousel.js"></script>
+
 </body>
 
 </html>

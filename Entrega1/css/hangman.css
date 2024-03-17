@@ -1,36 +1,35 @@
-/* Reset default margin and padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* Include padding and border in element's total width and height */
+
 }
 
-/* Body styles */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     margin: 0;
-    /* Remove default margin */
+
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* Header styles */
+
 header {
     background-color: #333;
     color: #fff;
     padding: 20px;
     width: 100%;
-    /* Ensure header spans the full width */
+
     text-align: center;
-    /* Center all content in header */
+
 }
 
 header img {
     width: 200px;
-    /* Adjust image size as needed */
+
     height: auto;
     margin-bottom: 10px;
 }
@@ -57,25 +56,25 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Main styles */
+
 main {
     flex: 1;
-    /* Grow to fill remaining space */
+
     padding: 20px;
     width: 100%;
-    /* Ensure main content spans the full width */
+
     max-width: 1200px;
-    /* Optional: Set a maximum width for main content */
+
     margin: 0 auto;
-    /* Center main content horizontally */
+
     overflow-x: hidden;
-    /* Hide horizontal overflow */
+
 }
 
 section {
     margin-bottom: 30px;
     text-align: center;
-    /* Center all content in section */
+
 }
 
 h2 {
@@ -92,14 +91,14 @@ article h3 {
     margin-bottom: 1000px;
 }
 
-/* Footer styles */
+
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 20px;
     width: 100%;
-    /* Ensure footer spans the full width */
+
 }
 
 @keyframes zoomInOut {
@@ -125,7 +124,8 @@ h2.word {
     text-align: center;
     color: royalblue;
     text-transform: uppercase;
-    letter-spacing: 6px;
+    letter-spacing: 10px;
+
 }
 
 .flex-row {
@@ -133,6 +133,8 @@ h2.word {
     justify-content: center;
     flex-wrap: wrap;
     margin: 10px auto;
+
+
 }
 
 .no-wrap {
@@ -140,8 +142,9 @@ h2.word {
 }
 
 .col {
-    width: 50%;
+    width: 100%;
     text-align: center;
+    margin-left: 50px;
 }
 
 #turns h3 {
@@ -161,6 +164,7 @@ picture {
 }
 
 picture img {
+    margin-top: 150px;
     position: absolute;
     top: 200px;
     right: 500px;
@@ -184,4 +188,21 @@ picture img {
 .frame {
     border: 2px dashed crimson;
     padding: 3px 2px 2px 6px;
+}
+
+#correct {
+    display: none;
+}
+
+#alphabet button {
+    font-size: 1.7em;
+
+    margin-right: 10px;
+}
+
+
+#reset{
+    margin-top: 20px;
+    padding: 15px 20px;
+    font-size: 1em;
 }

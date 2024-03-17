@@ -8121,5 +8121,3 @@ foreach($losMunicipios as $codigo => $nombre) {
 
 echo "{".implode(",", $elementos_json)."}"
 
-
-?>
