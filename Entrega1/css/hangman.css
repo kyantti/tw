@@ -195,8 +195,9 @@ picture img {
 }
 
 #alphabet button {
-    font-size: 1.7em;
-
+    margin: 5px;
+    font-size: 2em;
+    width: 50px;
     margin-right: 10px;
 }
 

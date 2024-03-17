@@ -16,6 +16,7 @@ async function getWordFromServer() {
 
 async function generateWordAndHint() {
     try {
+        hidden = [];
         const data = await getWordFromServer();
         word = data.word;
         document.getElementById("hint-space").innerHTML = data.hint;
@@ -25,8 +26,9 @@ async function generateWordAndHint() {
     }
 }
 
-function paintDashes(num) {
-    for (let i = 0; i < num; i++) {
+
+function paintDashes(characters) {
+    for (let i = 0; i < characters; i++) {
         hidden[i] = "_";
     }
     gap.innerHTML = hidden.join("");
@@ -66,7 +68,7 @@ function attempt(letter) {
     setTimeout(function () {
         document.getElementById("correct").className = "";
     }, 800);
-    checkEnd(); // Call the function after checking the attempt
+    checkEnd();
 }
 
 function checkEnd() {
@@ -93,22 +95,11 @@ function checkEnd() {
 
 async function start() {
     document.getElementById("correct").style.display = "none";
-    await generateWordAndHint();
+    generateWordAndHint();
     generateAlphabet("a", "z");
     attempts = 6;
     document.getElementById("attempts").innerHTML = attempts;
 }
-
-document.addEventListener("keydown", function(event) {
-    // Obtener la letra presionada por el usuario
-    const letter = event.key.toUpperCase();
-    
-    // Verificar si la tecla presionada es una letra del alfabeto
-    if (/^[A-ZÑ]$/.test(letter)) {
-      attempt(letter); // Intentar la letra presionada
-    }
-  });
   
-
 // Initialize
 window.onload = start;
